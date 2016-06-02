@@ -1,32 +1,33 @@
 class Highlow
-	attr_accessor :firstcard, :secondcard
+	attr_accessor :firstcard, :secondcard, :suit
 	def initialize
 
-@firstcard = rand(10) + 1
+@firstcard = rand(10) + 10a	
 @secondcard = rand(10) + 1
+@suit = rand(3) + 1
 
 end 
 
 def result(guess)
 	
 if @secondcard > @firstcard && guess == "higher"
-puts "Congratulations"
+return "Congratulations"
 
 elsif @secondcard < @firstcard && guess == "lower"
-puts "Congratulations"
+return "Congratulations"
 
 elsif @secondcard == @firstcard 
-puts "Push"
+return "Push"
 
 elsif @secondcard < @firstcard && guess == "higher"
-puts "You lose!"
+return "You lose!"
 
 elsif @secondcard > @firstcard && guess == "lower"
-puts "You lose!"				
+return "You lose!"				
 
 end
 end
 end
 
 
-Highlow.new
+Highlow.new	
